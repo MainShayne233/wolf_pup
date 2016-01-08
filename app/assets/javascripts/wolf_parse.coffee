@@ -6,7 +6,7 @@
 
 @ups_guy = (latex, step) ->
 	chr = latex[step]
-	destinations = ['brack', 'backslash', 'expo', 'norm', 'space']
+	destinations = ['brack', 'backslash', 'expo', 'norm', 'space', 'special']
 	for d in destinations
 		if this['is_'+d](chr)
 			return this[d+'_dealer'](latex, step)

@@ -29,3 +29,10 @@
 	args = args.map (i) -> "%28" + i + "%29"
 	args = '%28'+args.join("%2F")+'%29'
 	return box_boy(args, step)
+
+@root_dealer = (latex, step) ->
+	step += 5
+	box = if latex[step] == "[" then nth_root_dealer(latex, step) else sqrt_dealer(latex, step)
+	arg = box.val
+	step = box.step
+	return box_boy(arg, step)
