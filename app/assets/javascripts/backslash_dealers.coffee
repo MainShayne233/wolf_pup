@@ -30,9 +30,28 @@
 	args = '%28'+args.join("%2F")+'%29'
 	return box_boy(args, step)
 
+@int_dealer = (latex, step) ->
+	step += 4
+	lims = ''
+	if latex[step] in ['^','_']
+		box = top_and_sub_sniffer(latex, step)
+		lims = box.val
+		step = box.step
+	box = int_sniffer(latex, step)
+	arg = box.val
+	step = box.step
+	val = '%28integral' + lims + '+%28' + arg + '%29%29'
+	return box_boy(val, step)
+
+
 @root_dealer = (latex, step) ->
 	step += 5
 	box = if latex[step] == "[" then nth_root_dealer(latex, step) else sqrt_dealer(latex, step)
 	arg = box.val
 	step = box.step
 	return box_boy(arg, step)
+
+@pi_dealer = (latex, step) ->
+	step += 2
+	val = 'pi'
+	return box_boy(val, step)

@@ -1,5 +1,5 @@
 @backslash_dealer = (latex, step) ->
-	types = ['frac', 'comb', 'root']
+	types = ['frac', 'comb', 'root', 'int', 'pi']
 	for t in types
 		if this["is_#{t}"](latex, step)
 			return this["#{t}_dealer"](latex, step)

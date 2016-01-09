@@ -9,9 +9,6 @@
 	win = window.open(url, '_blank')
 	win.focus()
 
-@hello = () ->
-	alert('hello')
-
 @append = () ->
 	#$('#input').mathquill('write','\\int_a^b dx')
 	str = 'he'
