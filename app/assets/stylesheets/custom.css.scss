@@ -1,3 +1,22 @@
 .mathquill-editable{
 	margin-top: 40px;
 }
+
+var {
+    font-style: italic;
+}
+.sum {
+    display:inline-block;
+    text-align: center;
+}
+.sum .to, .sum big, .sum .from {
+    display:block;
+    font-size:.8em;
+}
+.sum big {
+    font-size: 1.5em;
+}
+.sum .from {
+    float: left;
+    width: 100%;
+}

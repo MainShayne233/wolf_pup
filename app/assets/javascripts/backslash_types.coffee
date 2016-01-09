@@ -42,3 +42,6 @@
 
 @is_text = (latex, step) ->
 	(latex[step+1..step+4].join '') == 'text'
+
+@is_to = (latex, step) ->
+	(latex[step+1..step+2].join '') == 'to'

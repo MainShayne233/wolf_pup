@@ -1,3 +1,11 @@
+@lim_script_sniffer = (latex, step) ->
+	step += 1
+	box = bracket_sniffer(latex, step)
+	val = "%28"+box.val+"%29+"
+	step = box.step
+	return box_boy(val, step)
+
+
 @top_and_sub_sniffer = (latex, step) ->
 	args = ['','']
 	flip = latex[step] == '^'

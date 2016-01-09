@@ -43,6 +43,34 @@
 	val = '%28integral' + lims + '+%28' + arg + '%29%29'
 	return box_boy(val, step)
 
+@lim_dealer = (latex, step) ->
+	step += 4
+	lim = ''
+	if latex[step] == '_'
+		step += 1
+		box = lim_script_sniffer(latex, step)
+		lim = box.val
+		step = box.step
+		step += 1
+	if latex[step] == '{'
+		box = bracket_sniffer(latex, step)
+		arg = box.val
+		step = box.step
+	else
+		arg = ''
+		while step < latex.length
+			box = ups_guy(latex, step)
+			arg += box.val
+			step = box.step
+			step += 1
+	val = "%28lim+" + lim + arg + "%29"
+	return box_boy(val, step)
+
+
+@pi_dealer = (latex, step) ->
+	step += 2
+	val = 'pi'
+	return box_boy(val, step)
 
 @root_dealer = (latex, step) ->
 	step += 5
@@ -51,7 +79,6 @@
 	step = box.step
 	return box_boy(arg, step)
 
-@pi_dealer = (latex, step) ->
+@to_dealer = (latex, step) ->
 	step += 2
-	val = 'pi'
-	return box_boy(val, step)
+	return box_boy("+to+", step)
