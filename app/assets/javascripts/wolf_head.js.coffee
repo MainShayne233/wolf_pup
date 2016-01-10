@@ -1,6 +1,6 @@
 console.log('loaded')
 
-@wolfram = () ->
+wolfram = () ->
 	console.log('k')
 	url_base = 'http://www.wolframalpha.com/input/?i='
 	latex = getLatex()
