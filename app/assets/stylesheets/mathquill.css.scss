@@ -32,7 +32,7 @@
 .mathquill-editable,
 .mathquill-embedded-latex .mathquill-editable {
   border: 1px solid gray;
-  padding: 2px;
+  padding: 20px;
 }
 .mathquill-embedded-latex .mathquill-editable {
   margin: 1px;
@@ -156,7 +156,7 @@
   display: inline-block;
 }
 .mathquill-rendered-math .unary-operator {
-  padding-left: 0.2em;
+  padding-left: .2em;
 }
 .mathquill-rendered-math sup,
 .mathquill-rendered-math sub {
@@ -293,6 +293,7 @@
 .mathquill-rendered-math .mathquill-editable {
   cursor: text;
   font-family: Symbola, "Times New Roman", serif;
+  //font-size: 200%;
 }
 .mathquill-rendered-math .selection,
 .mathquill-editable .selection,

@@ -1,9 +1,11 @@
 %body
-	#main
-		%span.mathquill-editable.mathquill-editor#input
-			\\sum_{i=1}^{\infty}\left(\frac{1}{x}\right)+5
-		%button{:onclick => "wolfram()"} Click me
-		%button{:onclick => "append()"} Append
+	.center.jumbotron
+		%h1 Wolf Pup!
+		%p Wolfram Alpha's little helper
+	.container.math
+		%span.mathquill-editable#input
+			\\int_1^{\infty}e^xdx
+	.container
+		%button.btn.btn-primary{:onclick => "wolfram()"} Ask Wolfram!
 	%p#output1
 	%p#output2
-	%td.button
