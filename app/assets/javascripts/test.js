@@ -1,3 +1,0 @@
-function wolfram(){
-	alert('hello')
-}
