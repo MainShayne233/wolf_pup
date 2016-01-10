@@ -1,5 +1,5 @@
 @backslash_dealer = (latex, step) ->
-	types = ['comb', 'frac', 'int', 'lim', 'pi', 'root', 'to']
+	types = ['cdot', 'comb', 'frac', 'ge', 'infty', 'int', 'lbrack', 'le', 'lim', 'pi', 'rbrack', 'root', 'sum', 'to']
 	for t in types
 		if this["is_#{t}"](latex, step)
 			return this["#{t}_dealer"](latex, step)
@@ -13,16 +13,11 @@
 	return box_boy(val, step)
 
 @expo_dealer = (latex, step) ->
-	arg = ""
 	step += 1
 	if latex[step] == '{'
-		while latex[step] != '}'
-			box = ups_guy(latex, step)
-			val = box.val
-			if val != ')'
-				arg += val if val != '('
-				step = box.step
-			step += 1
+		box = bracket_sniffer(latex, step)
+		arg = box.val
+		step = box.step
 	else
 		arg = latex[step]
 	val = '%5E'+'%28'+arg+'%29'

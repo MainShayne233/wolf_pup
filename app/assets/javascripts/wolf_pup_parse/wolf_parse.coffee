@@ -14,14 +14,10 @@
 	
 
 @wolf_parse = (latex) ->
-	args = []
 	latex = latex.split ""
 	step = 0
-	while step < latex.length
-		box = ups_guy(latex, step)
-		args.push box.val
-		step = box.step
-		step += 1
-	tail = args.join ''
-	document.getElementById('output2').innerHTML = tail
-	tail
+	box = til_the_end_sniffer(latex, step)
+	arg = box.val
+	step = box.step
+	document.getElementById('output2').innerHTML = arg
+	return arg

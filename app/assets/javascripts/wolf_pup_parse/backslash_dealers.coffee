@@ -1,3 +1,8 @@
+@cdot_dealer = (latex, step) ->
+	step += 4
+	val = "*"
+	return box_boy(val, step)
+
 @comb_dealer = (latex, step) ->
 	args = []
 	args[0] = ""
@@ -30,6 +35,16 @@
 	args = '%28'+args.join("%2F")+'%29'
 	return box_boy(args, step)
 
+@ge_dealer = (latex, step) ->
+	step += 2
+	val = '%3E%3D'
+	return box_boy(val, step)
+
+@infty_dealer = (latex, step) ->
+	step += 5
+	val = 'infinity'
+	return box_boy(val, step)
+
 @int_dealer = (latex, step) ->
 	step += 4
 	lims = ''
@@ -40,8 +55,22 @@
 	box = int_sniffer(latex, step)
 	arg = box.val
 	step = box.step
-	val = '%28integral' + lims + '+%28' + arg + '%29%29'
+	val = '%28integral' + lims + arg + '%29'
 	return box_boy(val, step)
+
+@lbrack_dealer = (latex, step) ->
+	step += 5
+	step += 1 if latex[step] == '\\'
+	val = '%28' if latex[step] == '('
+	val = '%5B' if latex[step] == '['
+	val = '%7B' if latex[step] == '{'
+	return box_boy(val, step)
+
+@le_dealer = (latex, step) ->
+	step += 2
+	val = '%3C%3D'
+	return box_boy(val, step)
+
 
 @lim_dealer = (latex, step) ->
 	step += 4
@@ -57,12 +86,9 @@
 		arg = box.val
 		step = box.step
 	else
-		arg = ''
-		while step < latex.length
-			box = ups_guy(latex, step)
-			arg += box.val
-			step = box.step
-			step += 1
+		box = til_the_end_sniffer(latex, step)
+		arg = box.val
+		step = box.step
 	val = "%28lim+" + lim + arg + "%29"
 	return box_boy(val, step)
 
@@ -72,12 +98,39 @@
 	val = 'pi'
 	return box_boy(val, step)
 
+@rbrack_dealer = (latex, step) ->
+	step += 6
+	step += 1 if latex[step] == '\\'
+	val = '%29' if latex[step] == ')'
+	val = '%5D' if latex[step] == ']'
+	val = '%7D' if latex[step] == '}'
+	return box_boy(val, step)
+
 @root_dealer = (latex, step) ->
 	step += 5
 	box = if latex[step] == "[" then nth_root_dealer(latex, step) else sqrt_dealer(latex, step)
 	arg = box.val
 	step = box.step
 	return box_boy(arg, step)
+
+@sum_dealer = (latex, step) ->
+	step += 4
+	lims = ''
+	if latex[step] in ['^','_']
+		box = top_and_sub_sniffer(latex, step)
+		lims = box.val
+		step = box.step
+	if (latex[step+1..step+4].join '') == 'left'
+		box = paren_sniffer(latex, step)
+		arg = box.val
+		step = box.step
+	else
+		box = til_the_end_sniffer(latex, step)
+		arg = box.val
+		step = box.step
+	val = "%28sum+" + lims + arg + "%29%29"
+	return box_boy(val, step)
+
 
 @to_dealer = (latex, step) ->
 	step += 2

@@ -9,6 +9,7 @@
 	array += "abcdefghijklmnopqrstuvwxyz".split ''
 	array += ['-', '.']
 	array += ['[', ']']
+	array += ['!']
 	str in array
 
 @is_special = (str) ->

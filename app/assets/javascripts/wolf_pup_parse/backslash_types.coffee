@@ -1,17 +1,26 @@
+@is_cdot = (latex, step) ->
+	(latex[step+1..step+4].join '') == "cdot"
+
 @is_comb = (latex, step) ->
 	(latex[step+1..step+5].join '') == "binom"
 
 @is_frac = (latex, step) ->
 	(latex[step+1..step+4].join '') == 'frac'
 
-@is_geq = (latex, step) ->
-	(latex[step+1..step+3].join '') == 'geq'
+@is_ge = (latex, step) ->
+	(latex[step+1..step+2].join '') == 'ge'
+
+@is_infty = (latex, step) ->
+	(latex[step+1..step+5].join '') == 'infty'
 
 @is_int = (latex, step) ->
 	(latex[step+1..step+3].join '') == 'int'
 
-@is_leq = (latex, step) ->
-	(latex[step+1..step+3].join '') == 'leq'
+@is_lbrack = (latex, step) ->
+	(latex[step+1..step+4].join '') == 'left'
+
+@is_le = (latex, step) ->
+	(latex[step+1..step+2].join '') == 'le'
 
 @is_lpar = (latex, step) ->
 	(latex[step+1..step+5].join '') == 'lpar'
@@ -30,6 +39,9 @@
 
 @is_prod = (latex, step) ->
 	(latex[step+1..step+4].join '') == 'prod'
+
+@is_rbrack = (latex, step) ->
+	(latex[step+1..step+5].join '') == 'right'
 
 @is_rpar = (latex, step) ->
 	(latex[step+1..step+5].join '') == 'right'
