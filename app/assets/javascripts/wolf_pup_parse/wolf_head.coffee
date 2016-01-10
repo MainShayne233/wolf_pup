@@ -10,6 +10,5 @@
 	win.focus()
 
 @append = () ->
-	#$('#input').mathquill('write','\\int_a^b dx')
 	str = 'he'
 	this[str+'llo']()
