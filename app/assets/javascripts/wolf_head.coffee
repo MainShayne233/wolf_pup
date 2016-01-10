@@ -1,4 +1,4 @@
-wolfram = () ->
+@wolfram = () ->
 	url_base = 'http://www.wolframalpha.com/input/?i='
 	latex = getLatex()
 	url_tail = wolf_parse(latex)
