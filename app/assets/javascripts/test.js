@@ -520,7 +520,8 @@ this.special_dealer = function(latex, step) {
   return box_boy(arg, step);
 };
 
-this.wolfram = function() {
+wolfram = function() {
+  alert ('ay');
   var latex, url_base, url_tail;
   url_base = 'http://www.wolframalpha.com/input/?i=';
   latex = getLatex();
