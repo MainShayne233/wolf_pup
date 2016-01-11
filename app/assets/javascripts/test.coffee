@@ -1,0 +1,2 @@
+wolfram = () ->
+	alert "hello"
