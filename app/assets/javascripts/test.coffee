@@ -1,2 +1,2 @@
-wolfram = () ->
+@wolfram = () ->
 	alert "hello"
