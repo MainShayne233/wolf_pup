@@ -1,3 +1,7 @@
+function wolfram(){
+	alert('hello');
+}
+
 function getLatex(){
 
 	input = document.getElementById('input');
