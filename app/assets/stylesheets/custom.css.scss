@@ -15,14 +15,24 @@
 
 #input {
 	font-size: 200%;
-	letter-spacing: 3px;
+	letter-spacing: 1px;
 	margin-top: 40px;
 	text-align: center;
+	top: auto;
+}
+
+.sqrt-prefix{
+	font-size: 300%;
 }
 
 sup {
-    top: -0.2em;
+    top: -0.25em;
 }
+
+sub{
+	top: -0.05em;
+}
+
 
 .denominator {
     box-sizing: content-box;

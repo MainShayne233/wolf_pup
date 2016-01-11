@@ -264,7 +264,7 @@
 .mathquill-rendered-math .sqrt-prefix {
   padding-top: 0;
   position: relative;
-  top: .1em;
+  top: .05em;
   vertical-align: top;
   -webkit-transform-origin: top;
   -moz-transform-origin: top;
@@ -273,9 +273,9 @@
   transform-origin: top;
 }
 .mathquill-rendered-math .sqrt-stem {
-  border-top: 1px solid;
+  border-top: 2px solid;
   margin-top: 1px;
-  padding-left: .15em;
+  padding-left: .25em;
   padding-right: .2em;
   margin-right: .1em;
 }
