@@ -128,7 +128,7 @@
 		box = til_the_end_sniffer(latex, step)
 		arg = box.val
 		step = box.step
-	val = "%28sum+" + lims + arg + "%29%29"
+	val = "%28sum+" + lims + arg + "%29"
 	return box_boy(val, step)
 
 

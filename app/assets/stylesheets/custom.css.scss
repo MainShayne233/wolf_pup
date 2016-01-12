@@ -1,6 +1,13 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+.tool{
+	outline: 1px solid black;
+	border-radius: 0;
+	width: 75px;
+	height: 75px;
+}
+
 .center{
 	text-align: center;
 }
@@ -9,8 +16,8 @@
 	text-align:center;
 }
 
-.math {
-    padding-bottom: 30px;
+.denominator {
+    box-sizing: content-box;
 }
 
 #input {
@@ -21,19 +28,25 @@
 	top: auto;
 }
 
-.sqrt-prefix{
-	font-size: 300%;
-}
-
-sup {
-    top: -0.25em;
+.math {
+    padding-bottom: 30px;
 }
 
 sub{
 	top: -0.05em;
 }
 
+.submit{
+	padding-bottom: 50px;
+}
 
-.denominator {
-    box-sizing: content-box;
+
+sup {
+	font-size: 10%;
+    top: -0.05em;
+}
+
+
+.toolbar{
+	
 }

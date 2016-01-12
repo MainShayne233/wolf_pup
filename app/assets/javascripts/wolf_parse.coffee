@@ -19,5 +19,5 @@
 	box = til_the_end_sniffer(latex, step)
 	arg = box.val
 	step = box.step
-	document.getElementById('output2').innerHTML = arg
+	#document.getElementById('output2').innerHTML = arg
 	return arg
