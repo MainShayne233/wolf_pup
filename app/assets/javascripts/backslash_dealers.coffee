@@ -92,6 +92,25 @@
 	val = "%28lim+" + lim + arg + "%29"
 	return box_boy(val, step)
 
+@log_dealer = (latex, step) ->
+	step += 3
+	base = ''
+	if latex[step+1] == '_'
+		step += 2
+		if latex[step] == '{'
+			box = bracket_sniffer(latex, step)
+			base = box.val
+			step = box.step
+		else
+			base = latex[step]
+			#step +=1
+	val = 'log' + base + "+"
+	return box_boy(val, step)
+
+@ln_dealer = (latex, step) ->
+	step += 2
+	return box_boy('ln', step)
+
 
 @pi_dealer = (latex, step) ->
 	step += 2

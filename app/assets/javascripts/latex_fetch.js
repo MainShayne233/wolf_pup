@@ -4,11 +4,11 @@ function getLatex(){
 
 	latex = $(input).mathquill('latex');
 
-	//output = document.getElementById('output1');
+	output = document.getElementById('output1');
 
-	//$(output).mathquill('redraw');
+	$(output).mathquill('redraw');
 
-	//output.innerHTML = latex;
+	output.innerHTML = latex;
 
 	return latex;
 

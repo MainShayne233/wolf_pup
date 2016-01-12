@@ -28,6 +28,12 @@
 @is_lim = (latex, step) ->
 	(latex[step+1..step+3].join '') == 'lim'
 
+@is_log = (latex, step) ->
+	(latex[step+1..step+3].join '') == 'log'
+
+@is_ln = (latex, step) ->
+	(latex[step+1..step+2].join '') == 'ln'
+
 @is_multiply = (latex, step) ->
 	(latex[step+1..step+4].join '') == 'cdot'
 
