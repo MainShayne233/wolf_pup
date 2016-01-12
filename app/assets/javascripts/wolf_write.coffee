@@ -29,6 +29,8 @@
 		return '\\le'
 	if type == 'prod'
 		return '\\prod_{n=0}^{\\infty}'
+	if type == 'binom'
+		return '\\binom{}{}'
 
 		
 @wolf_write = (type) ->
