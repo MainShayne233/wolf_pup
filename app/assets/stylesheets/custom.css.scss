@@ -1,12 +1,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-.tool{
-	outline: 1px solid black;
-	border-radius: 0;
-	width: 75px;
-	height: 75px;
-}
 
 .center{
 	text-align: center;
@@ -20,17 +14,46 @@
     box-sizing: content-box;
 }
 
+h1{
+	margin: 0;
+}
+
 #input {
 	font-size: 200%;
 	letter-spacing: 1px;
-	margin-top: 40px;
 	text-align: center;
 	top: auto;
+}
+
+.jumbotron{
+	margin-top: -20px;
+	height: 150px;
+	h1{
+		margin-top: -30px;
+	}
+}
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  margin-left: -40px;
+  font-size: 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+}
+
+#logo:hover {
+  color: #fff;
+  text-decoration: none;
 }
 
 .math {
     padding-bottom: 30px;
 }
+
 
 sub{
 	top: -0.05em;
@@ -46,7 +69,13 @@ sup {
     top: -0.05em;
 }
 
-
 .toolbar{
-	
+	margin-top: -20px;
+}
+
+.tool{
+	outline: 1px solid black;
+	border-radius: 0;
+	width: 75px;
+	height: 75px;
 }
