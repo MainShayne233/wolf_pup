@@ -55,11 +55,14 @@
 @is_root = (latex, step) ->
 	(latex[step+1..step+4].join '') == 'sqrt'
 
-@is_sum = (latex, step) ->
-	(latex[step+1..step+3].join '') == 'sum'
+@is_sumprod = (latex, step) ->
+	(latex[step+1..step+3].join '') == 'sum' or (latex[step+1..step+4].join '') == 'prod' 
 
 @is_text = (latex, step) ->
 	(latex[step+1..step+4].join '') == 'text'
+
+@is_theta = (latex, step) ->
+	(latex[step+1..step+5].join '') == 'theta'
 
 @is_to = (latex, step) ->
 	(latex[step+1..step+2].join '') == 'to'

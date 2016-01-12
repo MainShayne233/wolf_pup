@@ -55,6 +55,8 @@
 	box = int_sniffer(latex, step)
 	arg = box.val
 	step = box.step
+	box = ups_guy(latex, step)
+	step = box.step
 	val = '%28integral' + lims + arg + '%29'
 	return box_boy(val, step)
 
@@ -114,7 +116,7 @@
 
 @pi_dealer = (latex, step) ->
 	step += 2
-	val = 'pi'
+	val = '%28pi%29'
 	return box_boy(val, step)
 
 @rbrack_dealer = (latex, step) ->
@@ -132,8 +134,13 @@
 	step = box.step
 	return box_boy(arg, step)
 
-@sum_dealer = (latex, step) ->
-	step += 4
+@sumprod_dealer = (latex, step) ->
+	if (latex[step+1..step+3].join '') == 'sum'
+		f = 'sum'
+		step += 4
+	else if (latex[step+1..step+4].join '') == 'prod'
+		f = 'product'
+		step += 5
 	lims = ''
 	if latex[step] in ['^','_']
 		box = top_and_sub_sniffer(latex, step)
@@ -147,8 +154,12 @@
 		box = til_the_end_sniffer(latex, step)
 		arg = box.val
 		step = box.step
-	val = "%28sum+" + lims + arg + "%29"
+	val = "%28" + f + "+" + lims + arg + "%29"
 	return box_boy(val, step)
+
+@theta_dealer = (latex, step) ->
+	step += 5
+	return box_boy("%28theta%29", step)
 
 
 @to_dealer = (latex, step) ->
