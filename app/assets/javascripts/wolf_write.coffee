@@ -33,8 +33,11 @@
 		return '\\binom{}{}'
 	if type == 'tau'
 		return '\\tau'
+	if type == 'infty'
+		return '\\infty'
+	if type == 'to'
+		return '\\to'
 
 		
-@wolf_write = (type) ->
-	latex = type_latex(type)
+@wolf_write = (latex) ->
 	$('#input').mathquill('write', latex)

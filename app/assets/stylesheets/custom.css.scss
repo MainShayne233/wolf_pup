@@ -6,8 +6,8 @@
 	text-align: center;
 }
 
-.container{
-	text-align:center;
+.wot{
+	padding-bottom: 100px;
 }
 
 .denominator {
@@ -54,6 +54,9 @@ h1{
     padding-bottom: 30px;
 }
 
+.mathquill-embedded-latex{
+
+}
 
 sub{
 	top: -0.05em;
@@ -69,10 +72,17 @@ sup {
     top: -0.05em;
 }
 
+.table{
+	text-align: left;
+	padding-left: 30%;
+	padding-left: 30%;
+	width: 100%;
+}
+
 .toolbar{
 	width: 100%;
-	padding-left: 20%;
-	padding-right: 20%;
+	padding-left: 30%;
+	padding-right: 30%;
 	margin-top: -20px;
 	padding-bottom: 20%;
 }
@@ -82,4 +92,29 @@ sup {
 	border-radius: 0;
 	width: 75px;
 	height: 75px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: #777;
+}
+
+
+p, span, li {
+  font-size: 1.1em;
+  line-height: 1.7em;
 }
