@@ -1,6 +1,7 @@
 %header.navbar.navbar-fixed.navbar-inverse
 	.container
-		#logo= link_to "Wolf Pup", '#'
+		#logo= link_to "Wolf Pup", root_path, method: :get
 		%nav
 			%ul.nav.navbar-nav.navbar-left
-				%li= link_to "Home", '#'
+				%li= link_to "Home", root_path, method: :get
+				%li= link_to "Guide", guide_path, method: :get
