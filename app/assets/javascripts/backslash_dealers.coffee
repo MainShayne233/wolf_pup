@@ -157,6 +157,11 @@
 	val = "%28" + f + "+" + lims + arg + "%29"
 	return box_boy(val, step)
 
+@tau_dealer = (latex, step) ->
+	step += 3
+	val = '%28tau%29'
+	return box_boy(val, step)
+
 @theta_dealer = (latex, step) ->
 	step += 5
 	return box_boy("%28theta%29", step)

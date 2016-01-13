@@ -31,6 +31,8 @@
 		return '\\prod_{n=0}^{\\infty}'
 	if type == 'binom'
 		return '\\binom{}{}'
+	if type == 'tau'
+		return '\\tau'
 
 		
 @wolf_write = (type) ->

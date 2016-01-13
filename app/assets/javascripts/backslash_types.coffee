@@ -58,6 +58,9 @@
 @is_sumprod = (latex, step) ->
 	(latex[step+1..step+3].join '') == 'sum' or (latex[step+1..step+4].join '') == 'prod' 
 
+@is_tau = (latex, step) ->
+	(latex[step+1..step+3].join '') == 'tau'
+
 @is_text = (latex, step) ->
 	(latex[step+1..step+4].join '') == 'text'
 
