@@ -14,6 +14,5 @@
 	box = bracket_sniffer(latex, step)
 	args[1] = box.val
 	step = box.step
-	#val = "%28" + args[0] + 'th+root+of+%28' + args[1] + "%29%29"
 	val = "%28" + args[1] + "^%281%2F" + args[0] + "%29%29"
 	return box_boy(val, step)
