@@ -1,6 +1,12 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+@mixin box_sizing {
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:         border-box;
+}
+
 
 .center{
 	text-align: center;
@@ -116,4 +122,19 @@ h2 {
 p, span, li {
   font-size: 1.1em;
   line-height: 1.7em;
+}
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  margin-bottom: 15px;
+  @include box_sizing;
+}
+
+textarea{
+	height: 100px;
+}
+
+input {
+  height: auto !important;
 }
