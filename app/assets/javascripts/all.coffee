@@ -445,7 +445,7 @@
 	for d in destinations
 		if this['is_'+d](chr)
 			return this[d+'_dealer'](latex, step)
-	alert "ups guy didn't get correct address when latex[step] = " + latex[step] + " and step = " + step
+	alert "Something went wrong, sorry. Next times the charm?"
 	
 
 @wolf_parse = (latex) ->
