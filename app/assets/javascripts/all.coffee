@@ -445,7 +445,7 @@
 	for d in destinations
 		if this['is_'+d](chr)
 			return this[d+'_dealer'](latex, step)
-	alert "Something went wrong, sorry. Next times the charm?"
+	alert "Something went wrong, sorry. It'd be very appreciated if you could send an email via the contact page with this code: " + latex
 	
 
 @wolf_parse = (latex) ->
